@@ -26,26 +26,29 @@ namespace SnakeAndLadder
 
                     int option = random.Next(0, 3);
 
-                    if (option == 1) // Ladder
+                    if (option == 1) 
                     {
                         newPosition = position + diceRoll;
                         Console.WriteLine("Dice rolled: " + diceRoll);
                         Console.WriteLine("Congratulations! You climbed a ladder and moved forward by " + diceRoll + " steps. \nNow you are at " + newPosition);
                     }
-                    else if (option == 2) // Snake
+                    else if (option == 2) 
                     {
                         newPosition = position - diceRoll;
                         Console.WriteLine("Dice rolled: " + diceRoll);
                         Console.WriteLine("Oh no! You got bitten by a snake and moved backward by " + diceRoll + " steps.");
                         Console.WriteLine("Now you are at " + newPosition);
                     }
-                    else // No Play
+                    else 
                     {
                         Console.WriteLine("No Play! Stay at the same position.");
                     }
 
                     if (newPosition <= 100)
                         position = newPosition;
+
+                    if (position == 100)
+                        break;
                 }
                 else
                 {
@@ -58,3 +61,6 @@ namespace SnakeAndLadder
         }
     }
 }
+
+
+
