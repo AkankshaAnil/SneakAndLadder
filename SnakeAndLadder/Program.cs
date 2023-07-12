@@ -1,5 +1,7 @@
-﻿namespace singleAndLadder;
-using SnakeAndLadder;
+﻿using SnakeAndLadder;
+
+namespace singleAndLadder;
+
 public class Program
 {
     private static void Main(string[] args)
